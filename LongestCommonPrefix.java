@@ -24,7 +24,7 @@ public class LongestCommonPrefix{
                 // If prefix becomes empty, return "" immediately (no common prefix)
 
         // Return the final value of prefix
-        return result;
+        return result;dsad
     }
 
 }
