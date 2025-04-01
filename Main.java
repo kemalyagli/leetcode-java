@@ -15,5 +15,15 @@ public class Main {
         int x = 10;
         boolean resultPalindrome = PalindromeNumber.isPalindrome(x); //isPalindrome is a public static method of PalindromeNumber class 
         System.out.println(resultPalindrome);                        //PalindromeNumber is public class, and we didnt import its package because they are already in the same folder
-        }
+        
+        // ===== Test Case for RomanToInteger =====
+        String s = "VIII";
+        int resultRomanToInteger = RomanToInteger.romanToInteger(s); 
+        System.out.println(resultRomanToInteger);          
+        
+        // ===== Test Case for RomanToInteger =====
+        String[] strs = {"flower","flow","flight"};
+        String resultLongestCommonPrefix = LongestCommonPrefix.longestCommonPrefix(strs); 
+        System.out.println(resultLongestCommonPrefix);  
+    }
 }
