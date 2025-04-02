@@ -15,14 +15,20 @@
 
 public class LongestCommonPrefix{
     public static String longestCommonPrefix(String[] strs){
-        String result = null;
+        String result = "";
         // Set the initial prefix as the first string in the array
         String initialPrefix = strs[0];
         // Loop through the remaining strings in the array starting from index 1
+        for (int i = 1; i < strs.length; i++){
             // While the current string does NOT start with the prefix
-                // Remove the last character from the prefix using substring
-                // If prefix becomes empty, return "" immediately (no common prefix)
-
+            while(!strs[i].startsWith(initialPrefix)){
+                initialPrefix = initialPrefix.substring(0, initialPrefix.length()-1);// Remove the last character from the prefix using substring
+                if (initialPrefix.length() == 0){
+                    return result;// If prefix becomes empty, return "" immediately (no common prefix)
+                }
+            }
+        }  
+        result = initialPrefix;
         // Return the final value of prefix
         return result;
     }

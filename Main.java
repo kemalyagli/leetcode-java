@@ -21,9 +21,15 @@ public class Main {
         int resultRomanToInteger = RomanToInteger.romanToInteger(s); 
         System.out.println(resultRomanToInteger);          
         
-        // ===== Test Case for RomanToInteger =====
+        // ===== Test Case for LongestCommonPrefix =====
         String[] strs = {"flower","flow","flight"};
         String resultLongestCommonPrefix = LongestCommonPrefix.longestCommonPrefix(strs); 
         System.out.println(resultLongestCommonPrefix);  
+
+        // ===== Test Case for ValidParantheses =====
+        String str = "()[]{}";
+        boolean resultValidParantheses = ValidParantheses.validParantheses(str);
+        System.out.println(resultValidParantheses);
+
     }
 }
