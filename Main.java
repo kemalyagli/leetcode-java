@@ -31,5 +31,30 @@ public class Main {
         boolean resultValidParantheses = ValidParantheses.validParantheses(str);
         System.out.println(resultValidParantheses);
 
+        // ==== First test for Dummy version ====
+        ListNode list1 = new ListNode(1, new ListNode(2, new ListNode(4)));
+        ListNode list2 = new ListNode(1, new ListNode(3, new ListNode(4)));
+
+        ListNode resultWithDummy = MergeTwoSortedListsWithDummy.mergeTwoLists(list1, list2);
+        System.out.print("Merged (With Dummy): ");
+        printList(resultWithDummy);
+
+        // ==== Second test for No-Dummy version (fresh lists) ====
+        ListNode list3 = new ListNode(1, new ListNode(2, new ListNode(4)));
+        ListNode list4 = new ListNode(1, new ListNode(3, new ListNode(4)));
+
+        ListNode resultNoDummy = MergeTwoSortedListsNoDummy.mergeTwoLists(list3, list4);
+        System.out.print("Merged (No Dummy): ");
+        printList(resultNoDummy);
+
+    }
+
+    // Helper method to print the merged list
+    public static void printList(ListNode head) {
+        while (head != null) {
+            System.out.print(head.val + " ");
+            head = head.next;
+        }
+        System.out.println();
     }
 }
