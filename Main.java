@@ -47,6 +47,19 @@ public class Main {
         System.out.print("Merged (No Dummy): ");
         printList(resultNoDummy);
 
+        // ===== Test Case for RemoveDuplicatesFromSortedArray =====
+        int[] nums1 = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
+
+        int k = RemoveDuplicatesFromSortedArray.removeDuplicates(nums1); // call your method
+
+        System.out.println("Unique count (k): " + k);
+
+        System.out.print("Modified array: ");
+        for (int i = 0; i < k; i++) {
+            System.out.print(nums1[i] + " ");
+        }
+        System.out.println(); // line break
+
     }
 
     // Helper method to print the merged list
