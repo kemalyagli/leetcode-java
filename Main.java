@@ -60,6 +60,18 @@ public class Main {
         }
         System.out.println(); // line break
 
+        // ===== Test Case for RemoveElement =====
+        int[] nums2 = {0, 1, 2, 2, 3, 0, 4, 2};
+        int val = 2;
+        
+        int k2 = RemoveElement.removeElement(nums2, val);
+        System.out.println("Remaining count (k): " + k2);
+        System.out.print("Modified array: ");
+            for (int i = 0; i < k; i++) {
+                System.out.print(nums2[i] + " ");
+            }
+        System.out.println(); // new line
+
     }
 
     // Helper method to print the merged list
