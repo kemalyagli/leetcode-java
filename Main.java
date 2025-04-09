@@ -72,6 +72,14 @@ public class Main {
             }
         System.out.println(); // new line
 
+        // ===== Test Case for FirstOccurrenceNeedleHaystack =====
+        String haystack = "sadbutsad";
+        String needle = "sad";
+
+        int index = FirstOccurrenceNeedleHaystack.firstOccurrenceNeedleHaystack(needle, haystack);
+
+        System.out.println("Index of first occurrence: " + index); // Expected output: 0
+
     }
 
     // Helper method to print the merged list

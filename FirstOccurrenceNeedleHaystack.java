@@ -23,15 +23,11 @@ Explanation: "leeto" did not occur in "leetcode", so we return -1.
 
  public class FirstOccurrenceNeedleHaystack{
     public static int firstOccurrenceNeedleHaystack(String needle, String haystack){ //built in function return haystack.indexOf(needle); would solve the problem in one line of code.
-        int result = -1;
-
-
-
-
-
-        return result;
+        for (int i = 0; i <= haystack.length() - needle.length(); i++){
+            if (haystack.substring(i, needle.length() + i).equals(needle)){ //equals is case sensitive, haystack.toLowerCase().substring(...) == needle.toLowerCase()
+                return i;
+            }
+        }
+        return -1;
     }
-
-
-
  } 
