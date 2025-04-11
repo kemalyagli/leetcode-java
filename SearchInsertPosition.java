@@ -20,13 +20,27 @@ Input: nums = [1,3,5,6], target = 2
 Output: 1
 */
 
-public class SearchInsertPosition{
-    public static int searchIndexPosition(int [] nums, int target){
-        int index = -1;
+public class SearchInsertPosition {
+    public static int searchInsertPosition(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length - 1; // Right should be the last valid index
 
+        while (left <= right) {
+            // Safer mid calculation to avoid integer overflow when left + right is too large
+            int mid = left + (right - left) / 2;
 
+            if (target == nums[mid]) {
+                return mid;
+            }
 
+            if (target < nums[mid]) {
+                right = mid - 1;  // Eliminate mid since it's already checked
+            } else {
+                left = mid + 1;   // Move to the right half
+            }
+        }
 
-        return index;
+        // If target not found, left points to the correct insert index
+        return left;
     }
 }

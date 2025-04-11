@@ -80,6 +80,15 @@ public class Main {
 
         System.out.println("Index of first occurrence: " + index); // Expected output: 0
 
+
+        // Test Case for SearchIndexPosition 
+
+        int [] nums3 = {1, 3, 5, 6, 8, 10, 13, 15, 18, 20};
+        int target3 = 0;
+
+        int index3 = SearchInsertPosition.searchInsertPosition(nums3, target3);
+        System.out.println(index3);
+
     }
 
     // Helper method to print the merged list
