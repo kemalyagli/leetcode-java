@@ -89,6 +89,11 @@ public class Main {
         int index3 = SearchInsertPosition.searchInsertPosition(nums3, target3);
         System.out.println(index3);
 
+        // ===== Test Case for LengthOfLastWord =====
+        String input1 = "   fly me   to   the moon  ";
+        int result1 = LengthOfLastWord.lengthOfLastWord(input1);
+        System.out.println("Result 1: " + result1);  // Expected: 4
+
     }
 
     // Helper method to print the merged list
