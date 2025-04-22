@@ -94,6 +94,24 @@ public class Main {
         int result1 = LengthOfLastWord.lengthOfLastWord(input1);
         System.out.println("Result 1: " + result1);  // Expected: 4
 
+        // ===== Test Case for MergeStringsAlternatively =====
+        String word1 = "abcd";
+        String word2 = "pq";
+        String result3 = MergeStringsAlternately.mergeStringsAlternately(word1, word2);
+        System.out.println("Result " + result3);  // Expected: 4
+
+        // ===== Test Case for KidsWithCandies =====
+        int [] candies = {4,2,1,1,2}; 
+        int extraCandies = 1;
+        boolean [] result4 = KidsWithCandies.kidsWithCandies(candies, extraCandies);
+        System.out.print(Arrays.toString(result4));   
+        
+        // ===== Test Case for CanPlaceFlowers =====
+        int[] flowerbed = {1, 0, 0, 0, 1};
+        int n = 2;
+        boolean result5 = CanPlaceFlowers.canPlaceFlowers(flowerbed, n);
+        System.out.println(result5); // Expected: true
+
     }
 
     // Helper method to print the merged list
